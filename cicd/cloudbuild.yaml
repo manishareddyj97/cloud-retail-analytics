@@ -1,1 +1,10 @@
-gjkkl
+steps:
+  - name: 'gcr.io/cloud-builders/terraform'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        terraform init
+        terraform apply -auto-approve
+
+timeout: 900s
